@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Sample title</title>
+  <link rel="stylesheet" href="style.css">
 
   <style>
     p {
@@ -16,10 +17,44 @@
       font-size: 36px;
       text-align: center;
     }
+
+    .class1 {
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .class_inline {
+      display: inline-block;
+    }
+
+    header li {
+      list-style: none;
+    }
+
+    a:link.menu, a:visited.menu {
+      text-decoration: none;
+      border: 1px solid thistle;
+      color: darkslateblue;
+      display: block;
+      width: 130px;
+      text-align: left;
+      margin-bottom: 2px;
+    }
+
+    a:hover.menu, a:active.menu {
+      color: darkred;
+    }
   </style>
 </head>
 <body>
   <h1>Main title</h1>
+  <header>
+    <ul>
+      <li><a href="http://codeforces.com" target="_blank" class="menu">Codeforces</a></li>
+      <li><a href="https://hackerrank.com" target="_blank" class="menu">Hackerrank</a></li>
+      <li><a href="https://acm.timus.ru" target="_blank" class="menu">Timus</a></li>
+    </ul>
+  </header>
   <img src="naruto.png" width="432" height="323" alt="НАРУТО!!">
   <p>
     This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its&nbsp;contents.
@@ -38,9 +73,16 @@
     </ol>
   </div>
   <div>
-    <a href="https://acm.timus.ru" target="_blank" title="timus link">
+    <a href="https://acm.timus.ru" target="_blank" title="timus link" class="class1">
       <div>
         Linking to timus
+      </div>
+    </a>
+  </div>
+  <div>
+    <a href="page1.html" target="_blank" title="local page1" class="class_inline">
+      <div>
+        Page1
       </div>
     </a>
   </div>
