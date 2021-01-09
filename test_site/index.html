@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8">
   <title>Sample title</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 
   <style>
-    p {
-      color: mediumslateblue;
-      font-size: 20px;
-      width: 550px;
+    @media (min-width: 1200px) {
+      p {
+        color: mediumslateblue;
+        font-size: 20px;
+        width: 550px;
+      }
+
+      h1 {
+        color: darkslateblue;
+        font-size: 36px;
+        text-align: center;
+      }
+
+      body {
+      }
+
+      .class1 {
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .class_inline {
+        display: inline-block;
+      }
+
+      .text {
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      header li {
+        list-style: none;
+      }
+
+      a:link.menu, a:visited.menu {
+        text-decoration: none;
+        border: 1px solid thistle;
+        color: darkslateblue;
+        display: block;
+        width: 130px;
+        text-align: left;
+        margin-bottom: 2px;
+      }
+
+      a:hover.menu, a:active.menu {
+        color: darkred;
+      }
     }
 
-    h1 {
-      color: darkslateblue;
-      font-size: 36px;
-      text-align: center;
+    @media (min-width: 992px) and (max-width: 1199px) {
     }
 
-    .class1 {
-      margin-bottom: 20px;
-      display: inline-block;
-    }
-
-    .class_inline {
-      display: inline-block;
-    }
-
-    header li {
-      list-style: none;
-    }
-
-    a:link.menu, a:visited.menu {
-      text-decoration: none;
-      border: 1px solid thistle;
-      color: darkslateblue;
-      display: block;
-      width: 130px;
-      text-align: left;
-      margin-bottom: 2px;
-    }
-
-    a:hover.menu, a:active.menu {
-      color: darkred;
+    @media (max-width: 991px) {
     }
   </style>
 </head>
@@ -55,8 +70,9 @@
       <li><a href="https://acm.timus.ru" target="_blank" class="menu">Timus</a></li>
     </ul>
   </header>
+  <h2>Title</h2>
   <img src="naruto.png" width="432" height="323" alt="НАРУТО!!">
-  <p>
+  <p class="text">
     This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its&nbsp;contents.
   </p>
   <div>
