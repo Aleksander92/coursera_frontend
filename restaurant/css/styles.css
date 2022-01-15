@@ -141,4 +141,14 @@ p {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
   }
+
+  .card-footer section {
+    text-align: center;
+  }
+
+  .card-footer section hr {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
