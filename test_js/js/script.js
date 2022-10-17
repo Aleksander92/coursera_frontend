@@ -16,9 +16,19 @@ function handleResponse(request, responseHandler) {
 
 document.addEventListener("DOMContentLoaded",
   function (event) {
-    document.querySelector("button").addEventListener("click", function () {
+    document.querySelector("#ajax_text").addEventListener("click", function () {
       sendGetRequest("/test_js/data/data.txt", function (request) {
-        document.querySelector("#content").innerHTML = "<h2>" + request.responseText + "</h2>";
+        document.querySelector("#content_ajax_text").innerHTML = "<h2>" + request.responseText + "</h2>";
+      });
+    });
+  }
+);
+
+document.addEventListener("DOMContentLoaded",
+  function (event) {
+    document.querySelector("#ajax_json").addEventListener("click", function () {
+      sendGetRequest("/test_js/data/data.json", function (request) {
+        document.querySelector("#content_ajax_json").innerHTML = "<h2>" + JSON.parse(request.responseText)["a"] + "</h2>";
       });
     });
   }
